@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Alert from './Alert';
 import { useGlobalContext } from '../context';
-import { logo, heroImg } from '../assets';
+import { heroImg } from '../assets';
 import styles from '../styles';
 
 const PageHOC = (Component, title, description) => () => {
@@ -15,7 +15,6 @@ const PageHOC = (Component, title, description) => () => {
       {showAlert?.status && <Alert type={showAlert.type} message={showAlert.message} />}
 
       <div className={styles.hocContentBox}>
-        <img src={logo} alt="logo" className={styles.hocLogo} onClick={() => navigate('/')} />
 
         <div className={styles.hocBodyWrapper}>
           <div className="flex flex-row w-full">
@@ -27,7 +26,7 @@ const PageHOC = (Component, title, description) => () => {
           <Component />
         </div>
 
-        <p className={styles.footerText}>Made with 💜 by JavaScript Mastery</p>
+        <p className={styles.footerText}>Made with 💜 by Ghostsmaw</p>
       </div>
 
       <div className="flex flex-1">
